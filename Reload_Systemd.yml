@@ -1,0 +1,9 @@
+# Reloading Systemd driver
+          - name: Reloading systemd driver
+            systemd:
+              daemon_reload: yes
+            register: SD_status
+
+          - name: Systemd Reload Status
+            debug:
+                    msg: "SystemD Reload Failed Status => {{ IPRouteTC_status.failed }}"
